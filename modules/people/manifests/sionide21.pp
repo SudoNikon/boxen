@@ -7,4 +7,6 @@ class people::sionide21 {
   include hipchat
   include iterm2::dev
   include textmate
+
+  include projects::all
 }
