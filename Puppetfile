@@ -56,3 +56,11 @@ github "xquartz",     "1.1.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+github "bash"
+github "chrome"
+github "dropbox"
+github "gitx"
+github "hipchat"
+github "iterm2"
+github "textmate"
+github "osx"
