@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: <%= @name %>_development
+  host: localhost
+  min_messages: WARNING
+
+test:
+  adapter: postgresql
+  database: <%= @name %>_test
+  host: localhost
+  min_messages: WARNING
