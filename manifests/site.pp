@@ -86,4 +86,9 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  # Use default ports for services
+  class { 'redis':      port => '6379' }
+  class { 'postgresql': port => '5432' }
+
 }
