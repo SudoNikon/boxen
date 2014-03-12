@@ -2,6 +2,7 @@ define railsapp (
   $application_yml = undef,
   $port            = undef,
   $ruby            = '2.0.0',
+  $mongodb         = undef,
 ) {
   include boxen::config
 
@@ -13,6 +14,7 @@ define railsapp (
     nginx      => true,
     redis      => true,
     memcached  => true,
+    mongodb    => $mongodb,
     ruby       => $ruby,
     source     => "SalesLoft/${name}",
   }

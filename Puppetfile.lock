@@ -79,6 +79,11 @@ GITHUBTARBALL
     memcached (2.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-mongodb
+  specs:
+    mongodb (1.2.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.4.3)
@@ -182,6 +187,7 @@ DEPENDENCIES
   iterm2 (>= 0)
   memcached (>= 0)
   module-data (= 0.0.1)
+  mongodb (>= 0)
   nginx (= 1.4.3)
   nodejs (= 3.5.0)
   openssl (= 1.0.0)

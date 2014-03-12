@@ -64,6 +64,7 @@ github "googledrive"
 github "hipchat"
 github "iterm2"
 github "memcached"
+github "mongodb"
 github "postgresql"
 github "redis",        "2.1.0"  # Version locked because of bugs with the 3.x.x releases
 github "sysctl"
