@@ -33,6 +33,7 @@ define railsapp (
 
   if $port {
     file { "${repo_dir}/.env":
+      replace => no,
       content => "PORT=${port}",
       require => Repository[$repo_dir],
     }
