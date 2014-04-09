@@ -1,2 +1,6 @@
 ---
 memcached::port: "11211"
+"ruby::rbenv_plugins":
+  "rbenv-gem-rehash":
+    "ensure": "4d7b92de4bdf549df59c3c8feb1890116d2ea985"
+    "source": "sstephenson/rbenv-gem-rehash"
