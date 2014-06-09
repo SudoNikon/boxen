@@ -7,7 +7,7 @@ class people::sb8244 {
   include googledrive
   include hipchat
   include iterm2::dev
-  include textmate
+  include sublime_text
 
   # Homebrew bash completion
   file { "$homebrew::config::installdir/etc/bash_completion.d/brew":
@@ -17,6 +17,10 @@ class people::sb8244 {
   package { 'htop-osx': }
 
   package { 'heroku-toolbelt': }
+
+  sublime_text::package { 'Emmet':
+    source => 'sergeche/emmet-sublime'
+  }
 
   include projects::all
 }

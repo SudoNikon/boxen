@@ -74,4 +74,5 @@ github "postgresql"
 github "redis",        "2.1.0"  # Version locked because of bugs with the 3.x.x releases
 github "sysctl"
 github "textmate"
+github "sublime_text"
 github "osx"
