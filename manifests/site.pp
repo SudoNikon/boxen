@@ -75,6 +75,13 @@ node default {
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
+  # Always provide bundler
+  ruby_gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.0',
+    ruby_version => '*',
+  }
+
   # common, useful packages
   package {
     [
