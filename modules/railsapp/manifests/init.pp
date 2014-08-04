@@ -1,7 +1,7 @@
 define railsapp (
   $application_yml = undef,
   $port            = undef,
-  $ruby            = '2.1.1',
+  $ruby            = '2.1.2',
   $mongodb         = undef,
 ) {
   include boxen::config
