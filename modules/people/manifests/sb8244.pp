@@ -1,6 +1,5 @@
 class people::sb8244 {
-  include bash
-  include bash::completion
+  include zsh
   include chrome
   include dropbox
   include gitx
