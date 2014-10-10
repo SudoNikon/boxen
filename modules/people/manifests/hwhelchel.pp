@@ -30,6 +30,7 @@ class people::hwhelchel {
   include phantomjs
   include openssl
   include nginx
+  include imagemagick
 
   # OS Settings
   include osx::finder::show_all_on_desktop
@@ -91,23 +92,31 @@ class people::hwhelchel {
   sublime_text::package { 'JsFormat':
     source => 'jdc0589/JsFormat'
   }
+  sublime_text::package { 'GitGutter':
+    source => 'jisaacks/GitGutter'
+  }
 
   file { "$home/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings":
     content  => '{
-      "trim_trailing_white_space_on_save": true,
-      "tab_size": 2,
-      "translate_tabs_to_spaces": true,
-      "color_scheme": "Packages/Base16 Color Schemes/base16-default.dark.tmTheme",
+      "color_scheme": "Packages/User/base16-default.dark (SL).tmTheme",
       "font_size": 16,
-      "save_on_focus_lost": true,
       "ignored_packages":
       [
         "Vintage"
-      ]}'
+      ],
+      "trim_trailing_white_space_on_save": true,
+      "tab_size": 2,
+      "translate_tabs_to_spaces": true,
+      "save_on_focus_lost": true,
+      "rulers":
+      [
+        80
+      ]}
+      '
   }
 
   file { "$home/.zshrc":
-    content => template('people/.zshrc.erb')
+    content => template('people/hwhelchel/.zshrc.erb')
   }
 
   include projects::all
