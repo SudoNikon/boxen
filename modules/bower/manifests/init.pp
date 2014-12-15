@@ -1,5 +1,5 @@
 class bower {
-  include nodejs::v0_10
+  include nodejs
   class { 'nodejs::global': version => 'v0.10' }
 
   package { 'chrome-cli': }
