@@ -69,7 +69,7 @@ github "hipchat"
 github "iterm2"
 github "java"
 github "memcached"
-github "mongodb"
+github "mongodb",      "1.3.3" # Version update for yosemite support
 github "postgresql"
 github "redis",        "2.1.0"  # Version locked because of bugs with the 3.x.x releases
 github "sysctl"
