@@ -34,6 +34,11 @@ GITHUBTARBALL
     elasticsearch (2.7.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-erlang
+  specs:
+    erlang (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.2.0)
@@ -226,6 +231,7 @@ DEPENDENCIES
   dnsmasq (= 2.0.1)
   dropbox (>= 0)
   elasticsearch (>= 0)
+  erlang (>= 0)
   flux (>= 0)
   foreman (= 1.2.0)
   gcc (= 2.2.0)
