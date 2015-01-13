@@ -30,6 +30,14 @@ class people::sionide21 {
     refreshonly => true,
   }
 
+  # Support Tim(e) Capsule
+  boxen::osx_defaults { 'Show Unsupported Time Machine Volumes ':
+    user    => $::boxen_user,
+    key     => 'TMShowUnsupportedNetworkVolumes',
+    domain  => 'com.apple.systempreferences',
+    value   => true,
+  }
+
   # Homebrew bash completion
   file { "$homebrew::config::installdir/etc/bash_completion.d/brew":
     ensure => "$homebrew::config::installdir/Library/Contributions/brew_bash_completion.sh",
