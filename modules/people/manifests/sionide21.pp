@@ -31,7 +31,7 @@ class people::sionide21 {
   }
 
   # Support Tim(e) Capsule
-  boxen::osx_defaults { 'Show Unsupported Time Machine Volumes ':
+  boxen::osx_defaults { 'Show Unsupported Time Machine Volumes':
     user    => $::boxen_user,
     key     => 'TMShowUnsupportedNetworkVolumes',
     domain  => 'com.apple.systempreferences',
