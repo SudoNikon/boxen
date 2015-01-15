@@ -5,6 +5,7 @@ define railsapp (
   $mongodb         = undef,
 ) {
   include boxen::config
+  include ssl::salesloft
 
   $repo_dir = "${boxen::config::srcdir}/${name}"
 
