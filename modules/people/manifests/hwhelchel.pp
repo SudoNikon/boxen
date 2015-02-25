@@ -72,6 +72,7 @@ class people::hwhelchel {
       "tab_size": 2,
       "translate_tabs_to_spaces": true,
       "save_on_focus_lost": true,
+      "ensure_newline_at_eof_on_save": true
       "rulers":
       [
         80
