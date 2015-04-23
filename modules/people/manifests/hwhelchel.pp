@@ -43,6 +43,8 @@ class people::hwhelchel {
     value   => true,
   }
 
+  nodejs::version { 'v0.12': }
+
   package { 'htop-osx': }
   package { 'the_silver_searcher': }
 
