@@ -39,4 +39,12 @@ define railsapp (
       require => Repository[$repo_dir],
     }
   }
+
+  exec { "Gemfile ruby version ${repo_dir}":
+    cwd         => $repo_dir,
+    command     => "sed -i '' \"s/^ruby .*$/ruby '${ruby}'/\" Gemfile",
+    onlyif      => "ls Gemfile",
+    refreshonly => true,
+    subscribe   => Ruby::Local[$repo_dir],
+  }
 }
