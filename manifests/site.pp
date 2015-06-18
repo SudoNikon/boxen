@@ -73,7 +73,7 @@ node default {
   # Always provide bundler
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
-    version      => '~> 1.0',
+    version      => '1.10.4',
     ruby_version => '*',
   }
 
