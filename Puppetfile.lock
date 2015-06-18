@@ -36,7 +36,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-erlang
   specs:
-    erlang (1.0.2)
+    erlang (1.0.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
