@@ -3,6 +3,6 @@ class projects::rolodex {
 
   railsapp { 'rolodex':
     port    => 9594,
-    ruby    => '2.1.2',
+    ruby    => '2.2.2',
   }
 }
