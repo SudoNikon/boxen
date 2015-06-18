@@ -8,6 +8,6 @@ class projects::melody {
 
   package {
     'imagemagick': ensure => present;
-    'gs': ensure => present;
+    'ghostscript': ensure => present;
   }
 }
