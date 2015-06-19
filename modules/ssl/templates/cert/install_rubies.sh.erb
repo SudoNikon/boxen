@@ -1,0 +1,6 @@
+crt="<%= @certpath %>.crt"
+watchdog=$(head -n2 $crt | tail -n1)
+
+for rubystore in /opt/rubies/*/openssl/ssl/cert.pem; do
+  grep -q "$watchdog" $rubystore || cat $crt >> $rubystore
+done
