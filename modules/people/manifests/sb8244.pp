@@ -116,7 +116,7 @@ class people::sb8244 {
   }
 
   file { "$home/.zshrc":
-    content => template('people/hwhelchel/.zshrc.erb')
+    content => template('people/sb8244/.zshrc.erb')
   }
 
   include projects::all
