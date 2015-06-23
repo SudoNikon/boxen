@@ -1,3 +1,19 @@
+# SalesLoft Boxen
+
+Welcome to SalesLoft! We use Boxen to manage our development laptops here. It is like Puppet for developers personal machines. You don't need to install Homebrew, Git, Postgres, Ruby, etc. or anything manually. Boxen manages all dependencies and the project repositories for you.
+
+## Getting Started
+
+1. Install XCode ( Ok I lied the one thing you install manually :] )
+2. Go here: http://setup-salesloft.herokuapp.com and run the script.
+3. Follow the Boxen prompt.
+4. Create a personal manifest using the `modules/people/manifests/your_github_login.pp` as a template.
+5. Reach out to another engineer to get .env files for the projects. We use these to manage our environment variables locally and in production.
+
+When you run `boxen` in the future it will make the minimal changes required to get your machine in the necessary state. So after adding your personal manifest it only will make the changes listed there.
+
+Peruse the rest of the README below if you'd like but don't feel the need to. It is more for us as an organization to understand how to create our own boxen.
+
 # Our Boxen
 
 This is a template Boxen project designed for your organization to fork and
