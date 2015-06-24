@@ -7,7 +7,7 @@ Welcome to SalesLoft! We use Boxen to manage our development laptops here. It is
 1. Install XCode ( Ok I lied the one thing you install manually :] )
 2. Go here: http://setup-salesloft.herokuapp.com and run the script.
 3. Follow the Boxen prompt.
-4. Create a personal manifest using the `modules/people/manifests/your_github_login.pp` as a template.
+4. Create a personal manifest using the `modules/people/manifests/your_github_login.pp` as a template. If you use `zsh` you also need to create a `.zshrc` template in `modules/people/templates/your_github_login`.
 5. Reach out to another engineer to get .env files for the projects. We use these to manage our environment variables locally and in production.
 
 When you run `boxen` in the future it will make the minimal changes required to get your machine in the necessary state. So after adding your personal manifest it only will make the changes listed there.
