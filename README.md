@@ -1,10 +1,10 @@
 # SalesLoft Boxen
 
-Welcome to SalesLoft! We use Boxen to manage our development laptops here. It is like Puppet for developers personal machines. You don't need to install Homebrew, Git, Postgres, Ruby, etc. or anything manually. Boxen manages all dependencies and the project repositories for you.
+Welcome to SalesLoft! We use Boxen to manage our development laptops here. It is like Puppet for developers personal machines. You don't need to install Homebrew, Git, Postgres, Ruby, etc. or anything (except X Code) manually. Boxen manages all dependencies and the project repositories for you.
 
 ## Getting Started
 
-1. Install XCode ( Ok I lied the one thing you install manually :] )
+1. Install XCode (the whole thing not just command line tools).
 2. Go here: http://setup-salesloft.herokuapp.com and run the script.
 3. Follow the Boxen prompt.
 4. Create a personal manifest using the `modules/people/manifests/your_github_login.pp` as a template. If you use `zsh` you also need to create a `.zshrc` template in `modules/people/templates/your_github_login`.
