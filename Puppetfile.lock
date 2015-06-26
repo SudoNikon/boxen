@@ -36,7 +36,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-elasticsearch
   specs:
-    elasticsearch (2.8.0)
+    elasticsearch (2.7.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-erlang
@@ -146,7 +146,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-postgresql
   specs:
-    postgresql (4.0.1)
+    postgresql (3.0.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-redis
@@ -236,7 +236,7 @@ DEPENDENCIES
   chrome (>= 0)
   dnsmasq (= 2.0.1)
   dropbox (>= 0)
-  elasticsearch (>= 0)
+  elasticsearch (= 2.7.2)
   erlang (>= 0)
   flux (>= 0)
   foreman (= 1.2.0)
@@ -262,7 +262,7 @@ DEPENDENCIES
   osx (>= 0)
   phantomjs (= 2.4.0)
   pkgconfig (= 1.0.0)
-  postgresql (>= 0)
+  postgresql (= 3.0.3)
   redis (= 2.1.0)
   repository (= 2.4.1)
   ruby (= 8.5.2)
