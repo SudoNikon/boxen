@@ -79,7 +79,7 @@ class people::msandt3 {
 	file { "/$home/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings":
 		content  => '{
 			"theme": "Numix Dark.sublime-theme",
-			"font_size": 16,
+			"font_size": 12,
 			"ignored_packages":
 			[
 			"Vintage"
@@ -91,7 +91,8 @@ class people::msandt3 {
 			"rulers":
 			[
 			80
-			]}
+			]},
+			"ensure_newline_at_eof_on_save": true
 			'
   }
   include projects::all
