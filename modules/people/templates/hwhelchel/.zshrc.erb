@@ -67,6 +67,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
-alias gprune="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
+alias gpr="git fetch origin --prune"
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
