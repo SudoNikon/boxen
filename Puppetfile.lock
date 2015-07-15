@@ -4,6 +4,11 @@ GITHUBTARBALL
     alfred (1.5.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-atom
+  specs:
+    atom (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-bash
   specs:
     bash (1.2.0)
@@ -230,6 +235,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   alfred (>= 0)
+  atom (>= 0)
   bash (>= 0)
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
