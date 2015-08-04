@@ -4,5 +4,5 @@ memcached::port: "11211"
   "rbenv-gem-rehash":
     "ensure": "4d7b92de4bdf549df59c3c8feb1890116d2ea985"
     "source": "sstephenson/rbenv-gem-rehash"
-"ruby::build::ensure": "v20150506"
+"ruby::build::ensure": "v20150803"
 git::version: "2.4.4"
