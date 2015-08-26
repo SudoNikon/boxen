@@ -5,6 +5,7 @@ class people::barberj{
   include zsh
   include ohmyzsh
   include iterm2::dev
+  include git
 
   # Apps
   include chrome
@@ -20,17 +21,25 @@ class people::barberj{
   # OS Settings
   include osx::dock::autohide
 
+  git::config::global { 'alias.done':
+    value  => "\"!git checkout master && git pull && git fetch -p && git branch --merged | ggrep -Pv '\\\\*|master' | xargs -n 1 git branch -d\""
+  }
+
+  #git::config::global { 'core.excludesfile':
+  #  value  => "$home/.gitignore_global"
+  #}
+
   # Save Screenshots to a folder on the desktop
-  file { "/Users/${::boxen_user}/Desktop/ScreenShots/":
+  file { "$home/Desktop/ScreenShots/":
     ensure => "directory",
   }
   boxen::osx_defaults { 'Save Screenshots to Folder':
     user    => $::boxen_user,
     key     => 'location',
     domain  => 'com.apple.screencapture',
-    value   => "/Users/${::boxen_user}/Desktop/ScreenShots/",
+    value   => "$home/Desktop/ScreenShots/",
     notify  => Exec['killall SystemUIServer'],
-    require => File["/Users/${::boxen_user}/Desktop/ScreenShots/"],
+    require => File["$home/Desktop/ScreenShots/"]
   }
   exec { 'killall SystemUIServer':
     refreshonly => true,
