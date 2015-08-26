@@ -10,4 +10,9 @@ class projects::melody {
     'imagemagick': ensure => present;
     'ghostscript': ensure => present;
   }
+
+  file { "${repo_dir}/config/database.yml":
+    content => template('railsapp/parallel_tests_database.yml.erb'),
+    require => Boxen::Project[$name],
+  }
 }

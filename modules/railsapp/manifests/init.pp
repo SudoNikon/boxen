@@ -21,7 +21,7 @@ define railsapp (
   }
 
   file { "${repo_dir}/config/database.yml":
-    content  => template('railsapp/database.yml.erb'),
+    content => template('railsapp/database.yml.erb'),
     require => Boxen::Project[$name],
   }
 
