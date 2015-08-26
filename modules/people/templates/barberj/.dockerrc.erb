@@ -1,0 +1,11 @@
+docker_init () {
+  eval "$(boot2docker shellinit)"
+}
+
+docker_rm () {
+  docker rm $(docker ps -aq)
+}
+
+docker_stop() {
+  docker stop $(docker ps -aq)
+}

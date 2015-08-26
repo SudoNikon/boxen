@@ -1,0 +1,31 @@
+echo 'Loading Darwin Resource Configuration'
+
+function toggleHiddenFiles {
+    showall="$(defaults read com.apple.Finder AppleShowAllFiles)"
+    if [ "$showall" = "YES" ]; then
+        command \defaults write com.apple.Finder AppleShowAllFiles NO
+    else
+        command \defaults write com.apple.Finder AppleShowAllFiles YES
+    fi
+    command \killall Finder
+}
+
+function toggleSystemAudio {
+    # https://discussions.apple.com/thread/3632556?start=15&tstart=0
+    # http://commandlinemac.blogspot.com/2008/12/nvram.html
+    # http://idolinux.blogspot.com/2008/08/bash-script-error-handling.html
+    audio="$(sudo nvram SystemAudioVolume 2>&1)"
+    if [[ "$audio" =~ "Error" ]]; then
+        echo "Turning system volume on"
+        sudo nvram SystemAudioVolume="%db"
+    else 
+        if [[ "$audio" =~ "%00" ]]; then
+            echo "Turning system volume on"
+            sudo nvram -d SystemAudioVolume
+            #sudo nvram SystemAudioVolume="%db"
+        else
+            echo "Turning system volume off"
+            sudo nvram SystemAudioVolume="%00"
+        fi
+    fi
+}

@@ -1,10 +1,6 @@
 class people::barberj{
   $home     = "/Users/${::boxen_user}"
 
-  # Checkout https://github.com/boxen/ for a huge collection of apps you can include.
-  # Most core development software should already be included with the railsapp, projects,
-  # bower, and ssl manifests that run as a part of boxen.
-
   # CLI
   include zsh
   include ohmyzsh
@@ -12,32 +8,17 @@ class people::barberj{
 
   # Apps
   include chrome
-  # Slack: https://itunes.apple.com/us/app/slack/id803453959
+  include onepassword::chrome
   include docker
-
-  # Windows Snap For Mac
-  # include shiftit
-  # Adapt Display Colors to Time of Day
-  # include flux
-
+  include caffeine
+  include onepassword
+  include erlang
+  include elixir
   include spotify
-
-  # Atom
   include atom
-  # install the linter package
-  # atom::package { 'linter': }
-
-  # install the monokai theme
-  # atom::theme { 'monokai': }
 
   # OS Settings
-  # These make backspacing and typing much snappier. Once you try it the defaults feel super slow.
-  # class { 'osx::global::key_repeat_delay':
-  #   delay => 10
-  # }
-  # class { 'osx::global::key_repeat_rate':
-  #   rate => 2
-  # }
+  include osx::dock::autohide
 
   # Save Screenshots to a folder on the desktop
   file { "/Users/${::boxen_user}/Desktop/ScreenShots/":
@@ -63,12 +44,21 @@ class people::barberj{
     value   => true,
   }
 
-  package { 'htop-osx': }
-  package { 'the_silver_searcher': }
-  package { 'heroku-toolbelt': }
+  package { [
+    'htop-osx',
+    'heroku-toolbelt',
+    'tmux'
+    ]:
+  }
 
   file { "$home/.zshrc":
     content => template('people/templates/barberj/.zshrc.erb')
+  }
+  file { "$home/.darwinrc":
+    content => template('people/templates/barberj/.darwinrc.erb')
+  }
+  file { "$home/.dockerrc":
+    content => template('people/templates/barberj/.dockerrc.erb')
   }
 
   include projects::all
