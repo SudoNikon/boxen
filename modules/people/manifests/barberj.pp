@@ -8,14 +8,14 @@ class people::barberj{
 
   # Apps
   include chrome
-  include onepassword::chrome
-  include docker
-  include caffeine
-  include onepassword
-  include erlang
-  include elixir
-  include spotify
-  include atom
+  #include onepassword
+  #include onepassword::chrome
+  #include docker
+  #include caffeine
+  #include erlang
+  #include elixir
+  #include spotify
+  #include atom
 
   # OS Settings
   include osx::dock::autohide
@@ -52,13 +52,13 @@ class people::barberj{
   }
 
   file { "$home/.zshrc":
-    content => template('people/templates/barberj/.zshrc.erb')
+    content => template('people/barberj/.zshrc.erb')
   }
   file { "$home/.darwinrc":
-    content => template('people/templates/barberj/.darwinrc.erb')
+    content => template('people/barberj/.darwinrc.erb')
   }
   file { "$home/.dockerrc":
-    content => template('people/templates/barberj/.dockerrc.erb')
+    content => template('people/barberj/.dockerrc.erb')
   }
 
   include projects::all
