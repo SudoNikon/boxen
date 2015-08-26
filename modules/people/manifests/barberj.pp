@@ -9,14 +9,11 @@ class people::barberj{
 
   # Apps
   include chrome
+  include atom
   #include onepassword
   #include onepassword::chrome
-  #include docker
   #include caffeine
-  #include erlang
-  #include elixir
   #include spotify
-  #include atom
 
   # OS Settings
   include osx::dock::autohide
@@ -56,6 +53,10 @@ class people::barberj{
   package { [
     'htop-osx',
     'heroku-toolbelt',
+    'docker',
+    'docker-compose',
+    'erlang',
+    'elixir',
     'tmux'
     ]:
   }
