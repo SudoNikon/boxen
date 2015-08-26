@@ -3,6 +3,7 @@ define railsapp (
   $port            = undef,
   $ruby            = '2.1.5',
   $mongodb         = undef,
+  $parallel_tests  = undef
 ) {
   include boxen::config
   include ssl::salesloft
@@ -20,8 +21,14 @@ define railsapp (
     source     => "SalesLoft/${name}",
   }
 
+  if $parallel_tests {
+    $db_template = 'railsapp/parallel_tests_database.yml.erb'
+  } else {
+    $db_template = 'railsapp/database.yml.erb'
+  }
+
   file { "${repo_dir}/config/database.yml":
-    content  => template('railsapp/database.yml.erb'),
+    content => template($db_template),
     require => Boxen::Project[$name],
   }
 
