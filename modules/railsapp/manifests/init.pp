@@ -22,15 +22,14 @@ define railsapp (
   }
 
   if $parallel_tests {
-    file { "${repo_dir}/config/database.yml":
-      content => template('railsapp/parallel_tests_database.yml.erb'),
-      require => Boxen::Project[$name],
-    }
+    $db_template = 'railsapp/parallel_tests_database.yml.erb'
   } else {
-    file { "${repo_dir}/config/database.yml":
-      content => template('railsapp/database.yml.erb'),
-      require => Boxen::Project[$name],
-    }
+    $db_template = 'railsapp/database.yml.erb'
+  }
+
+  file { "${repo_dir}/config/database.yml":
+    content => template($db_template),
+    require => Boxen::Project[$name],
   }
 
   if $application_yml {
