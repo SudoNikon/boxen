@@ -31,12 +31,12 @@ class people::7pm {
   # include rubymine
 
   # Atom
-  include atom
+  # include atom
   # install the linter package
-  atom::package { 'linter': }
+  # atom::package { 'linter': }
 
   # install the monokai theme
-  atom::theme { 'monokai': }
+  # atom::theme { 'monokai': }
 
   # Sublime
   # include sublime_text
