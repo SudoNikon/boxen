@@ -22,9 +22,9 @@ class people::barberj{
     value  => "\"!git checkout master && git pull && git fetch -p && git branch --merged | ggrep -Pv '\\\\*|master' | xargs -n 1 git branch -d\""
   }
 
-  #git::config::global { 'core.excludesfile':
-  #  value  => "$home/.gitignore_global"
-  #}
+  host { 'db':
+    ip => '127.0.0.1'
+  }
 
   # Save Screenshots to a folder on the desktop
   file { "$home/Desktop/ScreenShots/":
