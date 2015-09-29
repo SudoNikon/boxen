@@ -34,9 +34,5 @@ class people::danielandrews {
   package { 'mtr': }
   package { 'heroku-toolbelt': }
 
-  file { "$home/.zshrc":
-    content => template('people/hwhelchel/.zshrc.erb')
-  }
-
   include projects::all
 }
