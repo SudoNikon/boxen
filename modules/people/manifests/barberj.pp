@@ -26,6 +26,10 @@ class people::barberj{
     ip => '127.0.0.1'
   }
 
+  host { 'puppetmaster':
+    ip => '54.226.14.4'
+  }
+
   # Save Screenshots to a folder on the desktop
   file { "$home/Desktop/ScreenShots/":
     ensure => "directory",
@@ -53,8 +57,6 @@ class people::barberj{
   package { [
     'htop-osx',
     'heroku-toolbelt',
-    'docker',
-    'docker-compose',
     'erlang',
     'elixir',
     'tmux'
