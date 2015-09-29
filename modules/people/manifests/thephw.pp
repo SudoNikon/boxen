@@ -6,6 +6,10 @@ class people::thephw {
   include googledrive
 
   # OS Settings
+  include osx::finder::show_all_on_desktop
+  include osx::finder::empty_trash_securely
+  include osx::finder::unhide_library
+  include osx::finder::show_hidden_files
   include osx::global::enable_standard_function_keys
   include osx::global::tap_to_click
   include osx::dock::autohide
