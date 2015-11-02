@@ -33,7 +33,6 @@ class people::ssettle3 {
   # Editors
   include rubymine
   include sublime_text
-  include atom
 
   # Sublime Packages
    sublime_text::package { 'Emmet':
@@ -57,7 +56,7 @@ class people::ssettle3 {
    sublime_text::package { 'BracketHighlighter':
     source => 'facelessuser/BracketHighlighter'
    }
-   
+
 
    file { "$home/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings":
      content  => '{
