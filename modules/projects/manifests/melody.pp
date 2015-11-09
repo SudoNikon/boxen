@@ -8,7 +8,8 @@ class projects::melody {
   }
 
   package {
-    'imagemagick': ensure => present;
-    'ghostscript': ensure => present;
+    'imagemagick':  ensure => present;
+    'ghostscript':  ensure => present;
+    'chromedriver': ensure => present;
   }
 }
