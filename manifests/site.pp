@@ -73,6 +73,7 @@ node default {
   ruby::version { '2.0.0': }
   ruby::version { '2.1.7': }
   ruby::version { '2.2.3': }
+  ruby::version { '2.3.0-preview1': }
 
   # Always provide bundler
   ruby_gem { 'bundler for all rubies':
