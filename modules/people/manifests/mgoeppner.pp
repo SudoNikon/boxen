@@ -1,4 +1,4 @@
-class people::your_github_login {
+class people::mgoeppner {
   $home     = "/Users/${::boxen_user}"
 
   # Checkout https://github.com/boxen/ for a huge collection of apps you can include.
