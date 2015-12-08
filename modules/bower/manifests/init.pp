@@ -5,7 +5,7 @@ class bower {
   package { 'chrome-cli': }
 
   npm_module { 'bower':
-    node_version => 'v0.10',
+    node_version => '0.10',
     ensure => '1.3.12',
   }
 }
