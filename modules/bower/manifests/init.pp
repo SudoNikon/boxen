@@ -6,6 +6,6 @@ class bower {
 
   npm_module { 'bower':
     node_version => '0.10',
-    ensure => '1.3.12',
+    version => '1.3.12',
   }
 }
