@@ -64,7 +64,7 @@ github "bash"
 github "chrome"
 github "dropbox"
 github "elasticsearch", "2.7.2"
-github "erlang"
+mod "SalesLoft-erlang", :git => "git@github.com:SalesLoft/puppet-erlang.git" #Forked version to fix erlang urls
 github "gitx"
 github "googledrive"
 github "hipchat"
