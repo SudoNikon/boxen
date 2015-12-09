@@ -14,7 +14,7 @@ class people::mgoeppner {
   # include iterm2::colors::solarized_dark
 
   # Apps
-  include chrome
+  # include chrome
   # include dropbox
   # include googledrive
   # Slack: https://itunes.apple.com/us/app/slack/id803453959
@@ -24,19 +24,19 @@ class people::mgoeppner {
   # Adapt Display Colors to Time of Day
   # include flux
 
-  include spotify
+  # include spotify
 
   # Editors (Whatever works best for you!)
   # include textmate::textmate2::release
   # include rubymine
 
   # Atom
-  include atom
+  # include atom
   # install the linter package
-  atom::package { 'linter': }
+  # atom::package { 'linter': }
 
   # install the monokai theme
-  atom::theme { 'monokai': }
+  # atom::theme { 'monokai': }
 
   # Sublime
   # include sublime_text
