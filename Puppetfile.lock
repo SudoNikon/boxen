@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:SalesLoft/puppet-erlang.git
+  ref: master
+  sha: b38d52fc18c272d95ffb50278b2ea90d848c76e5
+  specs:
+    SalesLoft-erlang (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
@@ -42,11 +49,6 @@ GITHUBTARBALL
   remote: boxen/puppet-elasticsearch
   specs:
     elasticsearch (2.7.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-erlang
-  specs:
-    erlang (1.0.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -234,6 +236,7 @@ GITHUBTARBALL
     module_data (0.0.4)
 
 DEPENDENCIES
+  SalesLoft-erlang (>= 0)
   alfred (>= 0)
   atom (>= 0)
   bash (>= 0)
@@ -243,7 +246,6 @@ DEPENDENCIES
   dnsmasq (= 2.0.1)
   dropbox (>= 0)
   elasticsearch (= 2.7.2)
-  erlang (>= 0)
   flux (>= 0)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
