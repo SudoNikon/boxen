@@ -30,6 +30,10 @@ class people::barberj{
     ip => '54.226.14.4'
   }
 
+  host { 'docker':
+    ip => '192.168.99.100'
+  }
+
   # Save Screenshots to a folder on the desktop
   file { "$home/Desktop/ScreenShots/":
     ensure => "directory",

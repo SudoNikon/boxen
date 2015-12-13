@@ -47,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler)
+plugins=(git bundler docker)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.darwinrc
@@ -96,4 +96,9 @@ ssh_jump () {
   ssh-agent
   ssh-add ~/.ssh/id_rsa
   ssh -A ec2-user@54.175.120.47
+}
+
+pathogen_radiate () {
+  curl -Sso /usr/local/bin/pathogen_mutate https://gist.githubusercontent.com/barberj/a56f02eb72c40f6bdbe1/raw/12efbf02faac5b346515a377e7b9e188a4ad2f0e/pathogen_mutate.sh && \
+  chmod +x /usr/local/bin/pathogen_mutate
 }
