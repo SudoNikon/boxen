@@ -71,7 +71,6 @@ github "hipchat"
 github "iterm2"
 github "java"
 github "memcached"
-github "mongodb",      "1.3.4" # Version update for yosemite support
 github "postgresql",   "3.0.3"
 github "redis",        "2.1.0"  # Version locked because of bugs with the 3.x.x releases
 github "sysctl"
